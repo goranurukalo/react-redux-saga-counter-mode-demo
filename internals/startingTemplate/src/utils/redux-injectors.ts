@@ -1,7 +1,7 @@
 import {
   useInjectReducer as useReducer,
   useInjectSaga as useSaga,
-} from 'redux-injectors';
+} from 'redux-injectors2';
 import {
   InjectReducerParams,
   InjectSagaParams,

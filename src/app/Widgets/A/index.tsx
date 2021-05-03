@@ -7,14 +7,14 @@ import { useInjectReducer, useInjectSaga } from 'utils/redux-injectors';
 import { WidgetBox } from 'app/components/WidgetBox';
 import { saga } from './saga';
 import { reducer, requestIncrement } from './slice';
-import { SagaInjectionModes } from 'redux-injectors';
+import { SagaInjectionModes } from 'redux-injectors2';
 
 export function WidgetA() {
   useInjectReducer({ key: 'widgetA', reducer: reducer });
   useInjectSaga({
     key: 'widgetA',
     saga: saga,
-    mode: SagaInjectionModes.RESTART_ON_REMOUNT,
+    mode: SagaInjectionModes.COUNTER,
   });
 
   const dispatch = useDispatch();

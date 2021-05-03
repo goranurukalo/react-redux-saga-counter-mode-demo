@@ -3,7 +3,7 @@
  */
 
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
-import { createInjectorsEnhancer } from 'redux-injectors';
+import { createInjectorsEnhancer } from 'redux-injectors2';
 import createSagaMiddleware from 'redux-saga';
 
 import { createReducer } from './reducers';

@@ -12,7 +12,9 @@ import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
 import { GlobalStyle } from '../styles/global-styles';
 
-import { HomePage } from './pages/HomePage/Loadable';
+import { HomePage } from './pages/HomePage';
+import { WidgetAPage } from './pages/WidgetAPage';
+import { WidgetAAndBPage } from './pages/WidgetAAndBPage';
 import { NotFoundPage } from './pages/NotFoundPage/Loadable';
 import { useTranslation } from 'react-i18next';
 
@@ -30,6 +32,16 @@ export function App() {
 
       <Switch>
         <Route exact path={process.env.PUBLIC_URL + '/'} component={HomePage} />
+        <Route
+          exact
+          path={process.env.PUBLIC_URL + '/widget-a'}
+          component={WidgetAPage}
+        />
+        <Route
+          exact
+          path={process.env.PUBLIC_URL + '/widget-a-and-b'}
+          component={WidgetAAndBPage}
+        />
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />

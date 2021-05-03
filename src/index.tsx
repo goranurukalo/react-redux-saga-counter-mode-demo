@@ -45,9 +45,11 @@ ReactDOM.render(
   <Provider store={store}>
     <ThemeProvider>
       <HelmetProvider>
-        <React.StrictMode>
-          <App />
-        </React.StrictMode>
+        {/* I removed it, because `RESTART_ON_REMOUNT` mounts twice when strict mode is presented */}
+        {/* And COUNTER mode, solves this as well */}
+        {/* <React.StrictMode> */}
+        <App />
+        {/* </React.StrictMode> */}
       </HelmetProvider>
     </ThemeProvider>
   </Provider>,
